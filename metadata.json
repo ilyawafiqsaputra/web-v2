@@ -1,0 +1,6 @@
+{
+  "name": "Perpustakaan SMK Muhammadiyah Pakem — Sistem Sirkulasi & Katalog",
+  "description": "Sistem informasi manajemen perpustakaan terpadu untuk sirkulasi peminjaman, pengembalian, inventaris koleksi buku, kartu anggota digital, dan pelunasan denda di SMK Muhammadiyah Pakem.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#d8e3fb", "surface-variant": "#d8e3fb", "surface-dim": "#cfdaf2", "secondary-fixed-dim": "#ffb77d", "surface-container-high": "#dee8ff", "on-primary-fixed": "#00164e", "error": "#ba1a1a", "inverse-surface": "#263143", "tertiary-fixed": "#85f8c4", "surface-container-low": "#f0f3ff", "on-secondary-fixed": "#2f1500", "background": "#f9f9ff", "primary": "#00236f", "error-container": "#ffdad6", "tertiary-container": "#004a32", "surface": "#f9f9ff", "surface-bright": "#f9f9ff", "on-error": "#ffffff", "primary-container": "#1e3a8a", "tertiary": "#003120", "primary-fixed-dim": "#b6c4ff", "surface-container": "#e7eeff", "on-primary": "#ffffff", "on-primary-fixed-variant": "#264191", "on-tertiary-fixed": "#002114", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "primary-fixed": "#dce1ff", "on-secondary-fixed-variant": "#6e3900", "secondary-container": "#fe932c", "surface-container-lowest": "#ffffff", "inverse-primary": "#b6c4ff", "on-tertiary-container": "#4ac08f", "on-surface": "#111c2d", "surface-tint": "#4059aa", "secondary-fixed": "#ffdcc3", "tertiary-fixed-dim": "#68dba9", "outline-variant": "#c5c5d3", "on-surface-variant": "#444651", "on-secondary": "#ffffff", "on-primary-container": "#90a8ff", "secondary": "#904d00", "inverse-on-surface": "#ecf1ff", "on-secondary-container": "#663500", "on-tertiary-fixed-variant": "#005137", "on-background": "#111c2d", "outline": "#757682" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "margin": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem" }, "fontFamily": { "body-md": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.025em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="BacaBuku Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDur5oLWltA8tClxx4oWkx4BoSOouXj-GXLgL02XRmR1OTLSpyxYftysQbUDxMNvp7GOVns_G74yclflQKt1NO5PUfK9xN3a12L_IBL85Q8dpF-tq3TVGrcD0hP8QI6w3_tMDhK5m_X_H5ngkyQCbTB4AyWhpc2DuLnwlaQoadI1G1pXn-zo0Vb4jW8eu9HkKMqVvYd9HtAs98PkaSSWf1lBZLcLpMhm57W1TniUL2N"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none text-[15px]">SMK Muhammadiyah Pakem</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">Perpustakaan Sekolah</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center gap-space-sm"><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7hjsBpt92bmOzEuI-gaWNJv6mbMmU6UpjAoO5iQ3yQQ_fxfeSOwSFmv0T3I7Pb091glMQCl0TQorQMpNRt-6BATUdZoJO-plzq1vxwLYxR6iv6ALJg5Cvl5snM2BVhJT73KAFTxvOGGGlpDL6jo5AGhL4w_8pq33FbX1P2m2DhhFPwiQ2zhroVFEay9iLocYa8d9kowpKato7tbhNmWhfp6KF_O-WTQ1793P8uzk"><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface truncate">Siti Rahma</span><span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>Online • Pustakawan</span></div></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary font-title-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-ringkasan" href="#"><span class="material-symbols-outlined text-lg">grid_view</span><span class="font-body-md text-body-md">Dashboard &amp; Ringkasan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="katalog-inventaris-buku" href="#"><span class="material-symbols-outlined text-lg">menu_book</span><span class="font-body-md text-body-md">Katalog &amp; Inventaris Buku</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sirkulasi-transaksi" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">sync_alt</span><span class="font-body-md text-body-md">Sirkulasi &amp; Transaksi</span></div><span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm">3 Aktif</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="daftar-anggota" href="#"><span class="material-symbols-outlined text-lg">group</span><span class="font-body-md text-body-md">Daftar Anggota</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pengaturan-sistem" href="#"><span class="material-symbols-outlined text-lg">settings</span><span class="font-body-md text-body-md">Pengaturan Sistem</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl"><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="material-symbols-outlined text-base">help_outline</span><span class="font-label-md text-label-md">Pusat Panduan</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bantuan sirkulasi buku dan katalog digital.</p></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span><input class="w-full pl-9 pr-12 py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none shadow-[0_1px_3px_rgba(0,0,0,0.02)]" placeholder="Cari judul buku, pengarang, ISBN, atau nama anggota..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-outline">calendar_today</span><span>Selasa, 24 Oktober 2023</span><span class="text-outline">•</span><span class="text-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed px-2 py-0.5 rounded-full">08.00 - 16.00 WIB</span></div><div class="h-4 w-px bg-surface-container-highest hidden xl:block"></div><button class="relative p-space-xs rounded-lg hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-base">add</span><span>Transaksi Cepat</span></button></div></header><main class="w-full pt-16 px-gutter flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Navigation & Breadcrumbs -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" href="#">Sirkulasi &amp; Transaksi</a>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Pengembalian Buku</a>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Bukti Pengembalian &amp; Cetak Struk (#TR-2023-1878)</span>
+</nav>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span>SYNC ID: SYNC-OK-88421</span>
+</div>
+</div>
+<!-- Page Header Area -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">Status: Lunas &amp; Restorasi Sukses</span>
+<span class="text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">24 Okt 2023 • 14:32 WIB</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Bukti Pengembalian &amp; Pelunasan Denda</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Verifikasi penyelesaian transaksi pengembalian buku, pemulihan stok inventaris, dan cetak tanda terima denda keterlambatan sirkulasi.
+      </p>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<a class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md shadow-sm hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Kembali ke Sirkulasi</span>
+</a>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-highest text-primary font-label-md text-label-md rounded-lg hover:bg-primary-fixed transition-colors" id="btnShareModal" type="button">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Kirim ke WhatsApp/Email</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Cetak Struk Resmi</span>
+</button>
+</div>
+</div>
+<!-- Success Notification Banner -->
+<div class="mb-space-lg p-space-md bg-tertiary-fixed rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-tertiary">Transaksi Pengembalian Berhasil Diproses!</span>
+<span class="px-2 py-0.5 bg-tertiary text-on-tertiary rounded text-[11px] font-label-sm uppercase">Restored +1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant mt-0.5">
+          Stok buku fisik <strong>"Design Patterns" (ID: BK-008)</strong> otomatis dipulihkan ke Rak TI-04. Pembayaran denda keterlambatan sebesar <strong>Rp 2.000</strong> telah terverifikasi lunas di Buku Kas Kasir.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<span class="font-code-sm text-code-sm text-tertiary px-space-sm py-1 bg-surface-container-lowest/80 rounded">REF: KSR-88421</span>
+</div>
+</div>
+<!-- Main Grid: Left Audit Flow & Right Thermal Preview -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Audit, Member, Collection, Penalty & Settlement (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Step Flow Status Metric -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Alur Audit Transaksi Sirkulasi</span>
+<span class="font-code-sm text-code-sm text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Selesai Tanpa Sengketa
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1. Pengecekan Fisik</span>
+<span class="font-headline-sm text-headline-sm text-tertiary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">check_circle</span> Mulus
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Semua halaman &amp; cover utuh</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2. Rekapitulasi Denda</span>
+<span class="font-headline-sm text-headline-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span> 2 Hari
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rp 1.000 / hari keterlambatan</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">3. Kasir &amp; Stok</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">task_alt</span> Lunas
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Stok +1 &amp; Kas Masuk</span>
+</div>
+</div>
+</div>
+<!-- Member & Circulation Meta Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">badge</span>
+<h2>Informasi Anggota &amp; Rentang Pinjam</h2>
+</div>
+<span class="font-code-sm text-code-sm bg-surface-container px-2 py-0.5 rounded text-primary">#TR-2023-1878</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-headline-sm text-headline-sm flex-shrink-0">
+              BW
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface">Bambang Wijaya</span>
+<span class="material-symbols-outlined text-tertiary text-sm" title="Anggota Terverifikasi">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ANG-0091 • Peneliti Tamu (Fakultas Ilmu Komputer)</span>
+<span class="font-body-sm text-body-sm text-outline mt-1">bambang.wijaya@univ-research.ac.id</span>
+</div>
+</div>
+<div class="flex flex-col justify-center gap-1 text-on-surface-variant font-body-sm text-body-sm md:border-l md:border-surface-container-highest md:pl-space-md">
+<div class="flex items-center justify-between">
+<span>Tanggal Peminjaman:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">15 Okt 2023</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Batas Jatuh Tempo:</span>
+<span class="font-code-sm text-code-sm font-semibold text-error">22 Okt 2023</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Tanggal Pengembalian:</span>
+<span class="font-code-sm text-code-sm font-semibold text-tertiary">24 Okt 2023 (14:15 WIB)</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span>Selisih Keterlambatan:</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold">Terlambat 2 Hari</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Returned Book Details Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">menu_book</span>
+<h2>Rincian Koleksi Buku yang Dikembalikan</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-semibold">1 Eksemplar</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="w-24 h-32 flex-shrink-0 rounded shadow-md overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Cover of the famous book Design Patterns Elements of Reusable Object-Oriented Software classic computer science textbook deep navy blue and off white minimalist design studio lighting high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCDhPaI9kPhxY30yqgGKQadWE7-So6Yc_UypblljpjWEGoLYXfubo2CCxPVbAXFVzy817vVasQc7jkAQ6JOGmCgmroOKw2G5NUTbK58O7YtlqJeb2Vgf-Fu6nhqLnVzBF2SxkJ7SmSEDTKGYwaYyeWmo0Zm93aIqgnFFOmc86otDHjfvfIj1x5p9aOJZM_7SBzeGzTMRiBdFYj84-Rg_ZIGHC93k9f2rB61Ebk5KE">
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm bg-surface-container-highest text-primary px-1.5 py-0.5 rounded font-semibold">ID: BK-008</span>
+<span class="font-code-sm text-code-sm text-outline">ISBN: 978-0201633610</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dewey: 005.12 GAM</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mt-1">Design Patterns: Elements of Reusable Object-Oriented Software</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Penulis: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (Gang of Four)</p>
+<p class="font-body-sm text-body-sm text-outline">Penerbit: Addison-Wesley Professional • Cetakan Ke-14 (Hardcover)</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs pt-space-sm mt-space-sm bg-surface-container-lowest p-space-sm rounded">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Status Fisik</span>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-sm">check</span> Baik &amp; Utuh
+                </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Barcode &amp; RFID</span>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-sm">check</span> Terbaca Jelas
+                </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Lokasi Rak Kembali</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">RAK-TI-04-B</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Librarian Inspection Notes -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">rate_review</span>
+<div class="flex flex-col text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Catatan Pemeriksaan Pustakawan:</span>
+<p class="font-body-sm text-body-sm">
+              "Pemeriksaan nomor segel barcode RFID lolos uji sensor gerbang masuk. Halaman lengkap 395 hlm tanpa coretan pena basah. Tidak ada denda kerusakan buku fisik."
+            </p>
+<span class="font-code-sm text-code-sm text-outline mt-1">Diperiksa oleh: Siti Rahma (Pustakawan Pelaksana Sirkulasi)</span>
+</div>
+</div>
+</div>
+<!-- Fine Breakdown & Settlement Ledger -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">calculate</span>
+<h2>Rincian Perhitungan Denda Keterlambatan</h2>
+</div>
+<span class="font-code-sm text-code-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded font-semibold">Tarif Reguler SK-PERPUS/2023</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">timelapse</span>
+<span>Keterlambatan Pengembalian (2 Hari x Rp 1.000)</span>
+</div>
+<span class="font-code-sm text-code-sm font-semibold">Rp 2.000</span>
+</div>
+<div class="flex items-center justify-between text-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">auto_fix_high</span>
+<span>Biaya Kerusakan / Pemulihan Fisik Buku</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary">Rp 0 (Kondisi Baik)</span>
+</div>
+<div class="flex items-center justify-between text-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">receipt_long</span>
+<span>Biaya Administrasi Sirkulasi Perpustakaan</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary">Rp 0 (Bebas Biaya)</span>
+</div>
+<div class="h-px bg-surface-container-highest my-space-xs"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Total Kewajiban Denda</span>
+<span class="font-body-sm text-body-sm text-outline">Sudah termasuk pembulatan resmi sistem</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold">Rp 2.000</span>
+</div>
+</div>
+<!-- Payment Verification Badge Box -->
+<div class="p-space-md rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Status Pelunasan Kasir</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-tertiary-fixed">LUNAS - TUNAI (CASH)</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Uang diterima pas Rp 2.000 • Kembalian Rp 0</span>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">KASIR: Siti Rahma</span>
+<span class="font-code-sm text-code-sm text-on-tertiary-fixed-variant">BATCH: 20231024-K01</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Thermal Physical Struk Receipt Preview (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md sticky top-20">
+<!-- Print Preview Toolbar Control -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">settings_ethernet</span>
+<span>Konfigurasi Format Cetak</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant">Kertas Thermal</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-space-xs px-space-sm rounded text-center font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">receipt</span>
+            Thermal 80mm
+          </button>
+<button class="py-space-xs px-space-sm rounded text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">description</span>
+            Kwitansi A5
+          </button>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-body-sm text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary border-outline-variant focus:ring-0 cursor-pointer" type="checkbox">
+<span>Sertakan Stempel Digital &amp; QR Validasi</span>
+</label>
+</div>
+</div>
+<!-- Real Thermal Receipt Paper Simulator -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-md p-6 flex flex-col overflow-hidden">
+<!-- Serrated Top Edge Emulation (CSS background circles) -->
+<div class="w-full flex justify-between absolute -top-1.5 left-0 right-0 px-2 overflow-hidden opacity-40">
+<div class="flex gap-1.5 w-full justify-between">
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+</div>
+</div>
+<!-- Receipt Content Body (Thermal typography styling) -->
+<div class="pt-4 flex flex-col font-code-sm text-code-sm text-on-surface" id="printableReceipt">
+<!-- Library Header -->
+<div class="text-center flex flex-col items-center"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight text-[15px]">PERPUSTAKAAN SMK MUHAMMADIYAH PAKEM</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold text-[11px]">UNIT PERPUSTAKAAN &amp; LITERASI DIGITAL</span><span class="text-[11px] text-outline mt-0.5">Jl. Cangkringan Km. 1, Pakem, Sleman, D.I. Yogyakarta</span><span class="text-[11px] text-outline">Telp: (0274) 895-xxx • perpus@smkmuhpakem.sch.id</span><span class="text-[10px] text-outline mt-0.5">Jam Layanan: Senin - Sabtu 07.00 - 15.30 WIB</span></div>
+<!-- Divider Dashed -->
+<div class="w-full my-3 flex items-center overflow-hidden text-outline">
+<div class="w-full border-b border-dashed border-outline-variant"></div>
+</div>
+<!-- Meta Receipt Numbers -->
+<div class="flex flex-col gap-1 text-[11px]">
+<div class="flex justify-between">
+<span class="text-outline">NO. BUKTI :</span>
+<span class="font-bold text-on-surface">STR-2023-1024-098</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">NO. TRX PINJAM:</span>
+<span class="font-bold text-on-surface">TR-2023-1878</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">WAKTU KEMBALI:</span>
+<span>24/10/2023 14:32:09</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">PUSTAKAWAN/KSR:</span>
+<span>Siti Rahma (K01)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">ANGGOTA :</span>
+<span class="font-semibold text-right">Bambang Wijaya (ANG-0091)</span>
+</div>
+</div>
+<!-- Divider Dashed -->
+<div class="w-full my-3 flex items-center overflow-hidden">
+<div class="w-full border-b border-dashed border-outline-variant"></div>
+</div>
+<!-- Item Table -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between font-bold text-[11px] text-outline">
+<span>DESKRIPSI KOLEKSI</span>
+<span>STATUS</span>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between font-semibold">
+<span>[BK-008] Design Patterns</span>
+<span class="text-tertiary">DIKEMBALIKAN</span>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>Qty: 1 Eks (Kondisi: BAIK)</span>
+<span>Rak: TI-04</span>
+</div>
+</div>
+</div>
+<!-- Divider Dashed -->
+<div class="w-full my-3 flex items-center overflow-hidden">
+<div class="w-full border-b border-dashed border-outline-variant"></div>
+</div>
+<!-- Fine Computation Calculations -->
+<div class="flex flex-col gap-1 text-[11px]">
+<div class="flex justify-between">
+<span>Tgl Rencana Kembali:</span>
+<span>22/10/2023</span>
+</div>
+<div class="flex justify-between">
+<span>Tgl Realisasi:</span>
+<span>24/10/2023</span>
+</div>
+<div class="flex justify-between text-error font-medium">
+<span>Keterlambatan:</span>
+<span>2 Hari Kalender</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tarif Denda per Hari:</span>
+<span>Rp 1.000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Biaya Penggantian/Fisik:</span>
+<span>Rp 0</span>
+</div>
+<div class="w-full my-1.5 border-b border-dashed border-outline-variant"></div>
+<div class="flex justify-between text-body-md font-bold text-primary">
+<span>TOTAL DENDA:</span>
+<span>Rp 2.000</span>
+</div>
+<div class="flex justify-between font-semibold pt-1">
+<span>PEMBAYARAN (TUNAI):</span>
+<span>Rp 2.000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>KEMBALIAN:</span>
+<span>Rp 0</span>
+</div>
+<div class="flex justify-between text-tertiary font-bold text-[12px] pt-1">
+<span>STATUS:</span>
+<span>LUNAS (PAID)</span>
+</div>
+</div>
+<!-- Divider Dashed -->
+<div class="w-full my-3 flex items-center overflow-hidden">
+<div class="w-full border-b border-dashed border-outline-variant"></div>
+</div>
+<!-- Verification Stamp & Barcode Simulation -->
+<div class="flex flex-col items-center gap-2 py-2">
+<div class="p-2 border border-dashed border-tertiary/40 rounded bg-tertiary-fixed/30 text-center w-full">
+<span class="block text-[10px] font-bold uppercase tracking-wider text-tertiary">STAMPEL VALIDASI DIGITAL SISTEM SIRKULASI</span>
+<span class="block text-[9px] text-on-surface-variant font-mono">SECURE-HASH: 8F2A-098B-C119-BB76</span>
+<span class="block text-[9px] text-tertiary font-semibold mt-0.5">TERVERIFIKASI OTOMATIS OLEH SERVER PERPUS</span>
+</div>
+<!-- Simulated QR/Barcode Box -->
+<div class="flex flex-col items-center justify-center p-2 bg-white rounded shadow-sm w-32 h-32 my-1">
+<!-- Crisp SVG QR Code Representation -->
+<svg class="w-28 h-28" fill="currentColor" viewBox="0 0 100 100">
+<!-- QR Code Markers -->
+<rect fill="#00236f" height="28" rx="3" width="28" x="10" y="10"></rect>
+<rect fill="#ffffff" height="16" rx="2" width="16" x="16" y="16"></rect>
+<rect fill="#00236f" height="8" rx="1" width="8" x="20" y="20"></rect>
+<rect fill="#00236f" height="28" rx="3" width="28" x="62" y="10"></rect>
+<rect fill="#ffffff" height="16" rx="2" width="16" x="68" y="16"></rect>
+<rect fill="#00236f" height="8" rx="1" width="8" x="72" y="20"></rect>
+<rect fill="#00236f" height="28" rx="3" width="28" x="10" y="62"></rect>
+<rect fill="#ffffff" height="16" rx="2" width="16" x="16" y="68"></rect>
+<rect fill="#00236f" height="8" rx="1" width="8" x="20" y="72"></rect>
+<!-- Data Matrix Pixels -->
+<rect fill="#00236f" height="6" width="6" x="44" y="12"></rect>
+<rect fill="#00236f" height="6" width="6" x="52" y="18"></rect>
+<rect fill="#00236f" height="6" width="6" x="44" y="28"></rect>
+<rect fill="#00236f" height="6" width="6" x="12" y="44"></rect>
+<rect fill="#00236f" height="6" width="6" x="22" y="50"></rect>
+<rect fill="#00236f" height="6" width="6" x="32" y="44"></rect>
+<rect fill="#00236f" height="12" width="12" x="44" y="44"></rect>
+<rect fill="#00236f" height="6" width="6" x="60" y="44"></rect>
+<rect fill="#00236f" height="6" width="6" x="70" y="50"></rect>
+<rect fill="#00236f" height="6" width="6" x="80" y="44"></rect>
+<rect fill="#00236f" height="6" width="6" x="44" y="64"></rect>
+<rect fill="#00236f" height="6" width="6" x="52" y="72"></rect>
+<rect fill="#00236f" height="6" width="6" x="44" y="80"></rect>
+<rect fill="#00236f" height="8" width="8" x="64" y="64"></rect>
+<rect fill="#00236f" height="6" width="10" x="76" y="72"></rect>
+<rect fill="#00236f" height="8" width="8" x="64" y="80"></rect>
+</svg>
+<span class="text-[9px] text-outline font-mono mt-1">SCAN UNTUK VALIDASI</span>
+</div>
+<!-- Footer Message -->
+<p class="text-[10px] text-center text-outline leading-tight px-4 mt-1">
+              "Buku telah diverifikasi dan masuk kembali ke inventaris. Terima kasih telah menjaga keutuhan koleksi perpustakaan."
+            </p>
+<span class="text-[9px] text-outline font-mono mt-1">*** SIMPAN STRUK INI SEBAGAI BUKTI SAH ***</span>
+</div>
+</div>
+<!-- Serrated Bottom Edge Emulation -->
+<div class="w-full flex justify-between absolute -bottom-1.5 left-0 right-0 px-2 overflow-hidden opacity-40">
+<div class="flex gap-1.5 w-full justify-between">
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+<span class="w-2.5 h-2.5 bg-surface rounded-full flex-shrink-0"></span>
+</div>
+</div>
+</div>
+<!-- Action Buttons Below Receipt -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors" id="btnDownloadPDF" type="button">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+<span>Download PDF</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Print Sekarang</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal: Kirim Salinan Digital ke Email / WhatsApp -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="shareModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-md w-full p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">forward_to_inbox</span>
+<h3>Kirim Salinan Bukti Digital</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="btnCloseModal" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Kirim berkas PDF bukti pengembalian dan kwitansi lunas denda keterlambatan kepada anggota terdaftar.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Email Penerima</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-base">mail</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm focus:outline-none" type="email" value="bambang.wijaya@univ-research.ac.id">
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">Nomor WhatsApp (Aktif)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-base">chat</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded text-on-surface font-body-sm text-body-sm focus:outline-none" type="text" value="+62 812-9844-3321">
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-base">attach_file</span>
+<span class="font-code-sm text-code-sm truncate">Bukti_Pengembalian_TR-2023-1878.pdf (142 KB)</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md py-space-sm rounded font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" id="btnCancelModal" type="button">
+          Batal
+        </button>
+<button class="px-space-md py-space-sm rounded font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container transition-colors flex items-center gap-1" id="btnSendDigital" type="button">
+<span class="material-symbols-outlined text-sm">send</span>
+          Kirim Sekarang
+        </button>
+</div>
+</div>
+</div>
+<!-- Feedback Toast Container (Client micro-interaction) -->
+<div class="hidden fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm transition-all duration-300" id="toastMessage">
+<span class="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toastText">Struk berhasil diunduh dalam format PDF.</span>
+</div>
+<script>
+    // Interaction Handlers
+    const shareModal = document.getElementById('shareModal');
+    const btnShare = document.getElementById('btnShareModal');
+    const btnClose = document.getElementById('btnCloseModal');
+    const btnCancel = document.getElementById('btnCancelModal');
+    const btnSend = document.getElementById('btnSendDigital');
+    const btnPdf = document.getElementById('btnDownloadPDF');
+    const toast = document.getElementById('toastMessage');
+    const toastText = document.getElementById('toastText');
+
+    function showToast(msg) {
+      if (!toast) return;
+      toastText.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    if (btnShare && shareModal) {
+      btnShare.addEventListener('click', () => {
+        shareModal.classList.remove('hidden');
+      });
+    }
+
+    [btnClose, btnCancel].forEach(el => {
+      if (el && shareModal) {
+        el.addEventListener('click', () => {
+          shareModal.classList.add('hidden');
+        });
+      }
+    });
+
+    if (btnSend && shareModal) {
+      btnSend.addEventListener('click', () => {
+        shareModal.classList.add('hidden');
+        showToast('Salinan struk PDF berhasil dikirim ke WhatsApp & Email Bambang Wijaya!');
+      });
+    }
+
+    if (btnPdf) {
+      btnPdf.addEventListener('click', () => {
+        showToast('Memproses berkas PDF tanda terima... Siap diunduh!');
+      });
+    }
+  </script>
+</div></main></div>
+
+</body></html>

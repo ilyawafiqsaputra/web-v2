@@ -1,11 +1,40 @@
-<div align="center">
+# Sistem Perpustakaan — SMK Muhammadiyah Pakem
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplikasi web manajemen sirkulasi, katalog inventaris buku, direktori anggota, kartu digital SmartPass, dan cetak struk pengembalian/denda untuk **Perpustakaan SMK Muhammadiyah Pakem**.
 
-  <h1>Built with AI Studio</h2>
+## Cara Memindahkan & Menjalankan di Visual Studio Code
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 1. Prasyarat
+Pastikan di komputer Anda sudah terpasang:
+- **Node.js** versi 20 atau terbaru ([nodejs.org](https://nodejs.org/))
+- **Visual Studio Code** ([code.visualstudio.com](https://code.visualstudio.com/))
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 2. Buka Proyek di VS Code
+1. Unduh seluruh proyek ini (atau ekstrak file `perpustakaan-smk-pakem-vscode.zip`).
+2. Buka **Visual Studio Code**.
+3. Klik **File → Open Folder...** lalu pilih folder proyek hasil ekstraksi.
+4. Jika muncul pop-up rekomendasi ekstensi di pojok kanan bawah (dari `.vscode/extensions.json`), klik **Install** agar dukungan Tailwind CSS v4 & TypeScript aktif otomatis.
 
-</div>
+### 3. Instal Dependensi & Jalankan Aplikasi
+Buka terminal di dalam VS Code dengan menekan **`Ctrl + ~`** (atau menu **Terminal → New Terminal**), lalu jalankan perintah berikut secara berurutan:
+
+```bash
+npm install
+npm run dev
+```
+
+Setelah server berjalan, buka browser dan akses:
+- **http://localhost:3000**
+
+### 4. Perintah Lainnya
+- **Cek TypeScript / Lint**: `npm run lint`
+- **Build Produksi** (menghasilkan folder `dist/`): `npm run build`
+- **Preview Hasil Build**: `npm run preview`
+
+## Struktur Folder Utama
+- `src/App.tsx` — Root aplikasi & router halaman
+- `src/context/LibraryContext.tsx` — State global sirkulasi, katalog, anggota, dan penyimpanan `localStorage`
+- `src/data/libraryData.ts` — Data awal koleksi buku, anggota, transaksi, dan pengaturan
+- `src/components/` — Shell navigasi (`Layout.tsx`) dan komponen gambar (`SafeImage.tsx`)
+- `src/pages/` — Seluruh halaman fitur (`DashboardPage`, `CatalogPage`, `CirculationPage`, `MembersPage`, `MemberDetailPage`, `MemberCardPage`, `ReceiptPage`, `SettingsPage`)
+- `.vscode/` — Konfigurasi workspace, task, dan rekomendasi ekstensi VS Code
